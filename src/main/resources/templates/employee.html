@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <a href="/employees/add">Add employee</a><br>
+    <a href="/employees/add" th:text="#{employee.add}">Add employee</a><br>
     <a th:each="employee:${employees}" th:href="@{'/employees' + ${employee.id}}">
         <div style="width: 105px; float: left">
             <div>
@@ -21,7 +21,7 @@
                 <span th:text="${employee.salary}"></span>
                 <span th:text="${employee.position}"></span>
             </div>
-            Company info:
+            <p th:text="#{company.info}"></p>
             <div>
                 <span th:text="${employee.company.name}"></span>
             </div>

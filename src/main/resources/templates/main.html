@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>EmployeeCompany Page</title>
 </head>
 <body>
-<a href="/companies">Companies</a>
-<a href="/employees">Employees</a>
+<a href="?lang=hy">Armenian</a> | <a href="?lang=ru">Russian</a> | <a href="?lang=en">English</a>
+<br><br>
+<a href="/companies" th:text="#{main.companies}">Companies</a>
+<a href="/employees" th:text="#{main.employees}">Employees</a>
 </body>
 </html>

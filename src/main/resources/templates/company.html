@@ -5,7 +5,7 @@
     <title>Company Page</title>
 </head>
 <body>
-<a href="/addCompany">Add Company</a>
+<a href="/addCompany" th:text="#{companies.add}">Add Company</a>
 <table>
     <tr>
         <th>id</th>
@@ -19,7 +19,7 @@
         <td th:text="${company.name}"></td>
         <td th:text="${company.size}"></td>
         <td th:text="${company.address}"></td>
-        <td><a th:href="@{'/deleteCompany/'+${company.id}}">Delete</a></td>
+        <td><a th:href="@{'/deleteCompany/'+${company.id}}" th:text="#{company.delete}">Delete</a></td>
     </tr>
 </table>
 </body>
